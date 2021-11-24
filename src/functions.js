@@ -9,4 +9,17 @@
 //     return text = text.replace(/\s+/g," ");
 // }
 const clearBlankSpaces = text => (text = text.replace(/^\s+|\s+$/,"")) && (text = text.replace(/\s+$/,"")) && (text = text.replace(/\s+/g," "));
-export {clearBlankSpaces}; //Las exportaciones por defecto puede coger cualquier nombre en el import
+
+
+
+
+/**
+ * 
+ * @param {Object RegExp} expReg Expresión regular a validar
+ * @param {String} texto Cadena de caracteres para validar
+ * @returns {Boolean} Si la expresión regular es validado devolverá true
+ */
+ const expRegBool = (expReg,texto) => expReg.test(texto);
+
+
+ export {clearBlankSpaces,expRegBool}; //Las exportaciones por defecto puede coger cualquier nombre en el import
