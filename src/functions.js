@@ -18,4 +18,4 @@ const clearBlankSpaces = text => (text = text.replace(/^\s+|\s+$/,"")) && (text 
  */
 const getRandom = (min,max) => Math.floor(Math.random()*(max-min+1))+min;
 
- export {clearBlankSpaces,getRandom}; //Las exportaciones por defecto puede coger cualquier nombre en el import
+ export {clearBlankSpaces,getRandom}; //Las exportaciones por defecto puede coger cualquier nombre
