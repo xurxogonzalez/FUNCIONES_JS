@@ -9,4 +9,13 @@
 //     return text = text.replace(/\s+/g," ");
 // }
 const clearBlankSpaces = text => (text = text.replace(/^\s+|\s+$/,"")) && (text = text.replace(/\s+$/,"")) && (text = text.replace(/\s+/g," "));
-export {clearBlankSpaces}; //Las exportaciones por defecto puede coger cualquier nombre en el import
+
+/**
+ * 
+ * @param {Number} min Número mínimo de la serie
+ * @param {Number} max Número máximo de la serie 
+ * @returns {Number} Número aleatorio entre max y min, ambos incluidos
+ */
+const getRandom = (min,max) => Math.floor(Math.random()*(max-min+1))+min;
+
+ export {clearBlankSpaces,getRandom}; //Las exportaciones por defecto puede coger cualquier nombre en el import
