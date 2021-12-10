@@ -8,7 +8,7 @@
 //     text = text.replace(/\s+$/,"");
 //     return text = text.replace(/\s+/g," ");
 // }
-const clearBlankSpaces = text => (text = text.replace(/^\s+|\s+$/,"")) && (text = text.replace(/\s+$/,"")) && (text = text.replace(/\s+/g," "));
+const clearBlankSpaces = text => (text = text.replace(/^\s+|\s+$/, "")) && (text = text.replace(/\s+$/, "")) && (text = text.replace(/\s+/g, " "));
 
 /**
  * @description Función que devuelve un número aleatorio entre dos números enteros
@@ -16,13 +16,21 @@ const clearBlankSpaces = text => (text = text.replace(/^\s+|\s+$/,"")) && (text 
  * @param {Number} max - Número entero máximo de la serie 
  * @returns {Number} - Número aleatorio entre max y min, ambos incluidos
  */
-const getRandom = (min,max) => Math.floor(Math.random()*(max-min+1))+min;
+const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 /**
  * @description Función que determina el número más pequeño
- * @param {Object} array - Array de números que determina cuál es más pequeño 
- * @returns {Number} - El número más pequeño
+ * @param  {...Number} array - Se trata de un parámetro rest que nos permite representar un número indefinido de argumentos
+ * @returns {Number} - Retorna el número menor mínimo
  */
-const getMin = array => array.reduce((anterior, actual) => anterior < actual ? anterior : actual);
+const getMin = (...array) => array.reduce((anterior, actual) => anterior < actual ? anterior : actual);
 
- export {clearBlankSpaces,getRandom,getMin}; //Las exportaciones por defecto puede coger cualquier nombre
+/**
+ * @description Función que determina el número más grande
+ * @param  {...Number} array - Se trata de un parámetro rest que nos permite representar un número indefinido de argumentos
+ * @returns {Number} - Retorna el número mayor máximo
+ */
+const getMax = (...array) => array.reduce((anterior, actual) => anterior > actual ? anterior : actual);
+
+
+export { clearBlankSpaces, getRandom, getMin, getMax }; //Las exportaciones por defecto puede coger cualquier nombre
