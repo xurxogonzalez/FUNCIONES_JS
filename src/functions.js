@@ -20,17 +20,17 @@ const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + mi
 
 /**
  * @description Función que determina el número más pequeño
- * @param  {...Number} array - Se trata de un parámetro rest que nos permite representar un número indefinido de argumentos
+ * @param  {...Number} numeros - Parámetro rest
  * @returns {Number} - Retorna el número menor mínimo
  */
-const getMin = (...array) => array.reduce((anterior, actual) => anterior < actual ? anterior : actual);
+const getMin = (...numeros) => numeros.reduce((anterior, actual) => anterior < actual ? anterior : actual);
 
 /**
  * @description Función que determina el número más grande
- * @param  {...Number} array - Se trata de un parámetro rest que nos permite representar un número indefinido de argumentos
+ * @param  {...Number} numeros - Parámetro rest
  * @returns {Number} - Retorna el número mayor máximo
  */
-const getMax = (...array) => array.reduce((anterior, actual) => anterior > actual ? anterior : actual);
+const getMax = (...numeros) => numeros.reduce((anterior, actual) => anterior > actual ? anterior : actual);
 
 
 export { clearBlankSpaces, getRandom, getMin, getMax }; //Las exportaciones por defecto puede coger cualquier nombre
